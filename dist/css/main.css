@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans");
+.open-modal-dialog {
+  border: 1px solid #000;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 15px;
+  display: block;
+  margin: auto;
+  background: #fff;
+  padding: 5px; }
+
+.hide {
+  display: none; }
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.5); }
+
+.modal {
+  min-height: 500px;
+  width: 53%;
+  background: #ffffff;
+  border-radius: 10px;
+  margin: 2% auto;
+  position: relative;
+  z-index: 10;
+  animation: dialogAnim 0.4s; }
+  .modal__content {
+    text-align: center; }
+  .modal__img {
+    width: 200px;
+    margin-bottom: 20px; }
+  .modal__text {
+    font-family: "Open Sans", sans-serif;
+    font-size: 40px;
+    font-weight: 400;
+    margin: auto;
+    width: 90%; }
+  .modal__btns--block {
+    padding: 50px 0 50px 0; }
+  .modal__btns {
+    height: 50px;
+    width: 250px;
+    cursor: pointer;
+    background: #fff;
+    border: 2px solid #e3e2e2;
+    border-radius: 10px;
+    font-size: 25px;
+    color: gray;
+    font-family: "Open Sans", sans-serif;
+    margin: 20px; }
+  .modal__icon--cross {
+    width: 40px;
+    margin: 20px; }
+  .modal .unistall-primary {
+    background: red;
+    color: #fff;
+    border: 0; }
+  .modal .btn-cross {
+    cursor: pointer; }
+
+.shazam-primary {
+  background: blue;
+  color: #fff;
+  border: 0; }
+
+@keyframes dialogAnim {
+  0% {
+    top: -200px;
+    opacity: 0; }
+  100% {
+    top: 0;
+    opacity: 1; } }
