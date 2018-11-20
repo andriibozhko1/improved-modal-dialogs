@@ -42,29 +42,31 @@
     width: 90%; }
   .modal__btns {
     padding: 50px 0 50px 0; }
-  .modal .btn {
-    height: 50px;
-    width: 250px;
-    cursor: pointer;
-    background: #fff;
-    border: 2px solid #e3e2e2;
-    border-radius: 10px;
-    font-size: 25px;
-    color: gray;
-    font-family: "Open Sans", sans-serif;
-    margin: 20px; }
   .modal__icon--closeBtn {
     width: 40px;
     margin: 20px; }
-  .modal .unistall-primary {
-    background: red;
-    color: #fff;
-    border: 0; }
-  .modal .btn-cross {
+  .modal .btn-closeBtn {
     cursor: pointer; }
 
-.shazam-primary {
+.btn {
+  height: 50px;
+  width: 250px;
+  cursor: pointer;
+  background: #fff;
+  border: 2px solid #e3e2e2;
+  border-radius: 10px;
+  font-size: 25px;
+  color: gray;
+  font-family: "Open Sans", sans-serif;
+  margin: 20px; }
+
+.install {
   background: blue;
+  color: #fff;
+  border: 0; }
+
+.unistall {
+  background: red;
   color: #fff;
   border: 0; }
 

@@ -46,36 +46,38 @@ $font: "Open Sans", sans-serif;
     margin: auto;
     width: 90%;
   }
+
   &__btns {
     padding: 50px 0 50px 0;
-  }
-  .btn {
-    height: 50px;
-    width: 250px;
-    cursor: pointer;
-    background: #fff;
-    border: 2px solid rgb(227, 226, 226);
-    border-radius: 10px;
-    font-size: 25px;
-    color: gray;
-    font-family: $font;
-    margin: 20px;
+
   }
   &__icon--closeBtn {
     width: 40px;
     margin: 20px;
   }
-  .unistall-primary {
-    background: red;
-    color: #fff;
-    border: 0;
-  }
-  .btn-cross {
+  .btn-closeBtn {
     cursor: pointer;
   }
 }
-.shazam-primary {
-  background: blue;
+.btn {
+  height: 50px;
+  width: 250px;
+  cursor: pointer;
+  background: #fff;
+  border: 2px solid rgb(227, 226, 226);
+  border-radius: 10px;
+  font-size: 25px;
+  color: gray;
+  font-family: $font;
+  margin: 20px;
+}
+.install {
+  background:blue;
+  color:#fff;
+  border:0;
+}
+.unistall {
+  background:red;
   color:#fff;
   border:0;
 }
