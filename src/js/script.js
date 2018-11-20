@@ -4,21 +4,24 @@
   const openModalBtns = document.querySelectorAll(".open-modal-dialog");
   const primary = document.querySelectorAll("[data-type=btn-primary]");
   const closeBtns = document.querySelectorAll("[data-type=btn-close]");
+  const createBackground = document.createElement("div");
 
   for (let j = 0; j < openModalBtns.length; j++) {
     openModalBtns[j].addEventListener("click", function() {
-      const createBackground = document.createElement("div");
       const crossBtn = document.createElement("a");
+
       const openModal = function() {
         modal[j].classList.remove("hide");
         document.body.insertBefore(createBackground, modal[j]);
         createBackground.classList.add("overlay");
       };
+
       const closeDialog = function() {
         modal[j].classList.add("hide");
-        createBackground.remove();
+        createBackground.classList.remove("overlay");
         crossBtn.remove();
       };
+
       const addCrossBtn = function() {
         crossBtn.classList.add("btn-closeBtn");
         crossBtn.setAttribute("data-type", "btn-close");
