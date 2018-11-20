@@ -29,7 +29,10 @@
           '<img class="modal__icon--closeBtn" src="img/icon-popup-close.svg" alt="close" />';
         modal[j].insertBefore(crossBtn, modalContent[j]);
       };
-
+      primary[j].addEventListener('click',function(){
+        alert('DONE :)');
+        closeDialog();
+      });
       openModal();
       addCrossBtn();
       closeBtns[j].addEventListener("click", closeDialog);
