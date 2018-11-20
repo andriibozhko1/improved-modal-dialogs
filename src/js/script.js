@@ -9,7 +9,6 @@
 
   for (let j = 0; j < openModalBtn.length; j++) {
     openModalBtn[j].addEventListener("click", function(event) {
-      if (event.target == openModalBtn[j]) {
         const openModal = function() {
           modal[j].classList.remove("hide");
           document.body.insertBefore(createBackground, modal[j]);
@@ -37,9 +36,7 @@
             closeDialog();
           });
           createBackground.addEventListener("click", function(event) {
-            if (event.target == createBackground) {
               closeDialog();
-            }
           });
         }
         primary[j].addEventListener("click", function() {
@@ -49,7 +46,6 @@
           };
           setTimeout(WindowWithMsg, 500);
         });
-      }
     });
   }
 })();
