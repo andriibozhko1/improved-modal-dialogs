@@ -21,6 +21,7 @@ $font: "Open Sans", sans-serif;
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.5);
+  animation: showOverlay .4s;
 }
 .modal {
   min-height: 500px;
@@ -30,7 +31,7 @@ $font: "Open Sans", sans-serif;
   margin: 2% auto;
   position: relative;
   z-index: 10;
-  animation: dialogAnim 0.4s;
+  animation: dialogAnim .4s;
   &__content {
     text-align: center;
   }
@@ -88,5 +89,13 @@ $font: "Open Sans", sans-serif;
   100% {
     top: 0;
     opacity: 1;
+  }
+}
+@keyframes showOverlay {
+  0%{
+    background: rgba(255, 255, 255, 1);
+  }
+  100% {
+    background: rgba(0, 0, 0, 0.5);
   }
 }

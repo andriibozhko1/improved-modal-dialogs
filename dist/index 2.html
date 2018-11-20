@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Modal Dialog</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="normalize/normalize.css" />
+  </head>
+  <body>
+    <button class="open-modal-dialog">run popup</button>
+    <button class="open-modal-dialog">run popup 2</button>
+    <!-- MODAL -->
+
+    <!-- CONTENT -->
+    <div class="modal hide">
+      <div class="modal__content">
+        <img
+          class="modal__img"
+          src="img/icon-warning_notify-red.svg"
+          alt="warning"
+        />
+        <div class="modal__text">
+          Are you sure you want to uninstall the Shazam app
+        </div>
+        <div class="modal__btns">
+          <button data-type="btn-close" class="btn">Cancel</button>
+          <button data-type="btn-primary" class="btn uninstall ">Uninstall </button>
+        </div>
+      </div>
+    </div>
+    
+    <div class="modal hide">
+      <div class="modal__content">
+        <img
+          class="modal__img"
+          src="img/shazam.png"
+          alt="warning"
+        />
+        <div class="modal__text">
+          Install Shazam app?
+        </div>
+        <div class="modal__btns">
+          <button data-type="btn-close" class="btn ">Cancel</button>
+          <button data-type="btn-primary" class="btn install">Install</button>
+        </div>
+      </div>
+    </div>
+    <script src="js/script.js"></script>
+  </body>
+</html>

@@ -18,7 +18,8 @@
   left: 0;
   height: 100%;
   width: 100%;
-  background: rgba(0, 0, 0, 0.5); }
+  background: rgba(0, 0, 0, 0.5);
+  animation: showOverlay .4s; }
 
 .modal {
   min-height: 500px;
@@ -28,7 +29,7 @@
   margin: 2% auto;
   position: relative;
   z-index: 10;
-  animation: dialogAnim 0.4s; }
+  animation: dialogAnim .4s; }
   .modal__content {
     text-align: center; }
   .modal__img {
@@ -77,3 +78,9 @@
   100% {
     top: 0;
     opacity: 1; } }
+
+@keyframes showOverlay {
+  0% {
+    background: white; }
+  100% {
+    background: rgba(0, 0, 0, 0.5); } }
