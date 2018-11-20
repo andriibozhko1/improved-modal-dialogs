@@ -46,10 +46,10 @@ $font: "Open Sans", sans-serif;
     margin: auto;
     width: 90%;
   }
-  &__btns--block {
+  &__btns {
     padding: 50px 0 50px 0;
   }
-  &__btns {
+  .btn {
     height: 50px;
     width: 250px;
     cursor: pointer;
@@ -61,7 +61,7 @@ $font: "Open Sans", sans-serif;
     font-family: $font;
     margin: 20px;
   }
-  &__icon--cross {
+  &__icon--closeBtn {
     width: 40px;
     margin: 20px;
   }

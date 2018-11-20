@@ -1,11 +1,11 @@
 (function() {
   const modal = document.querySelectorAll(".modal");
+  const modalContent = document.querySelectorAll('.modal__content')
   const openModalBtn = document.querySelectorAll(".open-modal-dialog");
   const primary = document.querySelectorAll("[data-type=btn-primary]");
   const closeBtns = document.querySelectorAll("[data-type=btn-close]");
   const createBackground = document.createElement("div");
-  const modalHeader = document.querySelectorAll(".modal__header");
-  const cross = document.createElement("a");
+  const closeBtn = document.createElement("a");
 
   for (let j = 0; j < openModalBtn.length; j++) {
     openModalBtn[j].addEventListener("click", function(event) {
@@ -18,18 +18,18 @@
         const closeDialog = function() {
           modal[j].classList.add("hide");
           createBackground.remove();
-          cross.remove();
+          closeBtn.remove();
         };
-        const addCross = function() {
-          cross.classList.add("btn-cross");
-          cross.setAttribute("data-type", "btn-close");
-          cross.innerHTML =
-            '<img class="modal__icon--cross" src="img/icon-popup-close.svg" alt="close" />';
-          modalHeader[j].appendChild(cross);
+        const addCloseBtn = function() {
+          closeBtn.classList.add("btn-closeBtn");
+          closeBtn.setAttribute("data-type", "btn-close");
+          closeBtn.innerHTML =
+            '<img class="modal__icon--closeBtn" src="img/icon-popup-close.svg" alt="close" />';
+          modal[j].insertBefore(closeBtn,modalContent[j]);
         };
         openModal();
-        addCross();
-        cross.addEventListener("click", function() {
+        addCloseBtn();
+        closeBtn.addEventListener("click", function() {
           closeDialog();
         });
         for (let i = 0; i < closeBtns.length; i++) {

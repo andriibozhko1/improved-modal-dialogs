@@ -40,9 +40,9 @@
     font-weight: 400;
     margin: auto;
     width: 90%; }
-  .modal__btns--block {
-    padding: 50px 0 50px 0; }
   .modal__btns {
+    padding: 50px 0 50px 0; }
+  .modal .btn {
     height: 50px;
     width: 250px;
     cursor: pointer;
@@ -53,7 +53,7 @@
     color: gray;
     font-family: "Open Sans", sans-serif;
     margin: 20px; }
-  .modal__icon--cross {
+  .modal__icon--closeBtn {
     width: 40px;
     margin: 20px; }
   .modal .unistall-primary {
