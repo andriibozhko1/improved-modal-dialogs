@@ -8,21 +8,21 @@
   for (let j = 0; j < openModalBtns.length; j++) {
     const createBackground = document.createElement("div");
     const crossBtn = document.createElement("a");
-    const modal = modals[j];
+    const index = j;
 
-    const openModal = function(modal) {
-      modal.classList.remove("hide");
-      document.body.insertBefore(createBackground, modal);
+    const openModal = function(index) {
+      modals[index].classList.remove("hide");
+      document.body.insertBefore(createBackground, modals[index]);
       createBackground.classList.add("overlay");
     };
-    const addCrossBtn = function(modal) {
+    const addCrossBtn = function(index) {
       crossBtn.classList.add("btn-closeBtn");
       crossBtn.setAttribute("data-type", "btn-close");
       crossBtn.innerHTML = '<img class="modal__icon--closeBtn" src="img/icon-popup-close.svg" alt="close" />';
-      modal.insertBefore(crossBtn, modalContent[j]);
+      modals[index].insertBefore(crossBtn, modalContent[index]);
     };
-    const closeDialog = function(modal) {
-      modal.classList.add("hide");
+    const closeDialog = function(index) {
+      modals[index].classList.add("hide");
       createBackground.classList.remove("overlay");
       crossBtn.remove();
     };
@@ -31,24 +31,24 @@
     };
 
     primary[j].addEventListener("click", function() {
-      closeDialog(modal);
+      closeDialog(index);
       setTimeout(alertWindow, 800);
     });
     closeBtns[j].addEventListener("click", function() {
-      closeDialog(modal);
+      closeDialog(index);
     });
 
     crossBtn.addEventListener("click", function() {
-      closeDialog(modal);
+      closeDialog(index);
     });
 
     createBackground.addEventListener("click", function() {
-      closeDialog(modal);
+      closeDialog(index);
     });
 
     openModalBtns[j].addEventListener("click", function() {
-      openModal(modal);
-      addCrossBtn(modal);
+      openModal(index);
+      addCrossBtn(index);
     });
   }
 })();

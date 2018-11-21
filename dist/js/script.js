@@ -8,38 +8,47 @@
   for (let j = 0; j < openModalBtns.length; j++) {
     const createBackground = document.createElement("div");
     const crossBtn = document.createElement("a");
-    const modal = modals[j];
-    
-    const openModal = function(modal) {
-      modal.classList.remove("hide");
-      document.body.insertBefore(createBackground, modal);
+    const index = j;
+
+    const openModal = function(index) {
+      modals[index].classList.remove("hide");
+      document.body.insertBefore(createBackground, modals[index]);
       createBackground.classList.add("overlay");
     };
-    const addCrossBtn = function(modal) {
+    const addCrossBtn = function(index) {
       crossBtn.classList.add("btn-closeBtn");
       crossBtn.setAttribute("data-type", "btn-close");
-      crossBtn.innerHTML =
-        '<img class="modal__icon--closeBtn" src="img/icon-popup-close.svg" alt="close" />';
-      modal.insertBefore(crossBtn, modalContent[j]);
+      crossBtn.innerHTML = '<img class="modal__icon--closeBtn" src="img/icon-popup-close.svg" alt="close" />';
+      modals[index].insertBefore(crossBtn, modalContent[index]);
     };
-    const closeDialog = function(modal) {
-      modal.classList.add("hide");
+    const closeDialog = function(index) {
+      modals[index].classList.add("hide");
       createBackground.classList.remove("overlay");
       crossBtn.remove();
     };
     const alertWindow = function() {
       alert("Done!");
-    }
+    };
+
     primary[j].addEventListener("click", function() {
-      closeDialog(modal);
+      closeDialog(index);
       setTimeout(alertWindow, 800);
     });
-    closeBtns[j].addEventListener("click", function(){closeDialog(modal)});
-    crossBtn.addEventListener("click", function(){closeDialog(modal)});
-    createBackground.addEventListener("click", function(){closeDialog(modal)});
+    closeBtns[j].addEventListener("click", function() {
+      closeDialog(index);
+    });
+
+    crossBtn.addEventListener("click", function() {
+      closeDialog(index);
+    });
+
+    createBackground.addEventListener("click", function() {
+      closeDialog(index);
+    });
+
     openModalBtns[j].addEventListener("click", function() {
-      openModal(modal);
-      addCrossBtn(modal);
+      openModal(index);
+      addCrossBtn(index);
     });
   }
 })();
